@@ -1,0 +1,33 @@
+﻿<Window x:Class="CheckSumChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckSumChecker"
+        mc:Ignorable="d"
+        Title="Checksum Checker" Height="449.5" Width="422.5" ResizeMode="CanMinimize" Background="#FF31669B">
+    <Grid x:Name="Main_Window" AllowDrop="True" Margin="0,3,4,1" Drop="Main_Window_Drop">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Reflect">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF1D6EC3" Offset="0.772"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="481*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="Drop_a_File_To_Calculate_Checksum" Content="Drop a File To Calculate Checksum" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" Width="286" Height="26"/>
+        <Label x:Name="label_Copy1" Content="SHA256:" HorizontalAlignment="Left" Margin="1,215,0,0" VerticalAlignment="Top" Height="28" Width="58"/>
+        <Label x:Name="label_Copy2" Content="SHA1:" HorizontalAlignment="Left" Margin="1,285,0,0" Width="58" Height="28" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy3" Content="MD5:" HorizontalAlignment="Left" Margin="1,346,0,0" Width="58" Height="28" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy4" Content="SHA512:" HorizontalAlignment="Left" Margin="1,132,0,0" VerticalAlignment="Top" Height="28" Width="58" RenderTransformOrigin="0.518,-0.679"/>
+        <TextBox x:Name="SHA256TxtBx" HorizontalAlignment="Left" Height="37" Margin="6,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" IsReadOnly="True" Background="#FFC7C7C7"/>
+        <TextBox x:Name="SHA512TxtBx" HorizontalAlignment="Left" Height="51" Margin="6,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" IsReadOnly="True" Background="#FFC7C7C7"/>
+        <TextBox x:Name="SHA1TxtBx" HorizontalAlignment="Left" Margin="6,317,0,0" TextWrapping="Wrap" Width="398" IsReadOnly="True" Background="#FFC7C7C7" Height="28" VerticalAlignment="Top"/>
+        <TextBox x:Name="MD5TxtBx" HorizontalAlignment="Left" Margin="6,379,0,0" TextWrapping="Wrap" Width="398" IsReadOnly="True" Background="#FFC7C7C7" FontFamily="Arial Unicode MS" Height="28" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Compare CRC" HorizontalAlignment="Left" Margin="273,131,0,0" VerticalAlignment="Top" Width="132" Height="21" Click="Button_Click"/>
+        <TextBox x:Name="compTxtBox" HorizontalAlignment="Left" Height="85" Margin="6,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
+
+    </Grid>
+</Window>
