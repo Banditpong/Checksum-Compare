@@ -31,15 +31,21 @@ namespace CheckSumChecker
         {
             if(e.Data.GetDataPresent(DataFormats.FileDrop, false))
             {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                try
+                {
+                    string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-                byte[] stream = File.ReadAllBytes(files[0]);
-                
-                SHA1TxtBx.Text = BitConverter.ToString(SHA1.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
-                MD5TxtBx.Text = BitConverter.ToString(MD5.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
-                SHA256TxtBx.Text = BitConverter.ToString(SHA256.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
-                SHA512TxtBx.Text = BitConverter.ToString(SHA512.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+                    byte[] stream = File.ReadAllBytes(files[0]);
 
+                    SHA1TxtBx.Text = BitConverter.ToString(SHA1.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+                    MD5TxtBx.Text = BitConverter.ToString(MD5.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+                    SHA256TxtBx.Text = BitConverter.ToString(SHA256.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+                    SHA512TxtBx.Text = BitConverter.ToString(SHA512.Create().ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Unable to open file");
+                }
             }
         }
 
@@ -67,6 +73,11 @@ namespace CheckSumChecker
             {
                 compTxtBox.Background = Brushes.Red;
             }
+        }
+
+        private void CompTxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            compTxtBox.Background = Brushes.White;
         }
     }
 }

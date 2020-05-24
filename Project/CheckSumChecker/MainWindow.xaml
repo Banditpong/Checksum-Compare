@@ -27,7 +27,7 @@
         <TextBox x:Name="SHA1TxtBx" HorizontalAlignment="Left" Margin="6,317,0,0" TextWrapping="Wrap" Width="398" IsReadOnly="True" Background="#FFC7C7C7" Height="28" VerticalAlignment="Top"/>
         <TextBox x:Name="MD5TxtBx" HorizontalAlignment="Left" Margin="6,379,0,0" TextWrapping="Wrap" Width="398" IsReadOnly="True" Background="#FFC7C7C7" FontFamily="Arial Unicode MS" Height="28" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Compare CRC" HorizontalAlignment="Left" Margin="273,131,0,0" VerticalAlignment="Top" Width="132" Height="21" Click="Button_Click"/>
-        <TextBox x:Name="compTxtBox" HorizontalAlignment="Left" Height="85" Margin="6,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
+        <TextBox x:Name="compTxtBox" HorizontalAlignment="Left" Height="85" Margin="6,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" TextChanged="CompTxtBox_TextChanged"/>
 
     </Grid>
 </Window>
