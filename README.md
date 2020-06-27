@@ -7,4 +7,4 @@ Calculates and Compares file Checksums
 3. Click on 'Compare CRC'
 4. If the text box background turns green then the CRC matches, but a red background means the CRC does not match.
 
-![Screenshot of the program](ss.png "Screenshot of Checksum-Compare")
+![Screenshot of the program](SS.png "Screenshot of Checksum-Compare")
