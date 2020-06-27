@@ -51,7 +51,7 @@ namespace CheckSumChecker
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string compStr = compTxtBox.Text.ToLowerInvariant();
+            string compStr = compTxtBox.Text.ToLowerInvariant().TrimEnd();
 
             if (compStr == SHA1TxtBx.Text)
             {
