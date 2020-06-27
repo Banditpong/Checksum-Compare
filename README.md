@@ -1,5 +1,5 @@
 # Checksum-Compare
-Calculates and Compares file Checksums written in C# WPF
+A C# WPF Program that Calculates and Compares file Checksums
 
 # Usage
 1. Paste in the Expected CRC in the first TextBox.
