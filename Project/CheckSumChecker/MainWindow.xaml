@@ -23,7 +23,7 @@
         <Label x:Name="label_Copy1" Content="SHA256 (Calculated):" HorizontalAlignment="Left" Margin="1,215,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
         <Label x:Name="label_Copy2" Content="SHA1 (Calculated):" HorizontalAlignment="Left" Margin="1,285,0,0" Width="129" Height="28" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy3" Content="MD5 (Calculated):" HorizontalAlignment="Left" Margin="1,346,0,0" Width="129" Height="28" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy4" Content="SHA512 (Calcualted):" HorizontalAlignment="Left" Margin="1,132,0,0" VerticalAlignment="Top" Height="28" Width="129" RenderTransformOrigin="0.518,-0.679"/>
+        <Label x:Name="label_Copy4" Content="SHA512 (Calculated):" HorizontalAlignment="Left" Margin="1,132,0,0" VerticalAlignment="Top" Height="28" Width="129" RenderTransformOrigin="0.518,-0.679"/>
         <TextBox x:Name="SHA256TxtBx" HorizontalAlignment="Left" Height="37" Margin="6,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" IsReadOnly="True" Background="#FFC7C7C7"/>
         <TextBox x:Name="SHA512TxtBx" HorizontalAlignment="Left" Height="51" Margin="6,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" IsReadOnly="True" Background="#FFC7C7C7"/>
         <TextBox x:Name="SHA1TxtBx" HorizontalAlignment="Left" Margin="6,317,0,0" TextWrapping="Wrap" Width="398" IsReadOnly="True" Background="#FFC7C7C7" Height="28" VerticalAlignment="Top"/>
