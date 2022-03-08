@@ -29,11 +29,14 @@ namespace CheckSumChecker
 
         private void Main_Window_Drop(object sender, DragEventArgs e)
         {
-            if(e.Data.GetDataPresent(DataFormats.FileDrop, false))
+            compTxtBox.Background = Brushes.White;
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
             {
                 try
                 {
                     string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                    
 
                     byte[] stream = File.ReadAllBytes(files[0]);
 
